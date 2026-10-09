@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Участники | FSOCIETY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css?v=2" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="FSOCIETY, на главную">
+          <span class="brand-mark">F</span>
+          <span class="brand-text">FSOCIETY</span>
+        </a>
+        <a class="nav-button" href="support.html#registration">Регистрация</a>
+      </div>
+    </header>
+
+    <main class="admin-page">
+      <div class="admin-container">
+        <div class="admin-heading">
+          <div>
+            <p class="eyebrow">Локальный список</p>
+            <h1>Участники</h1>
+          </div>
+          <a href="index.html">На главную</a>
+        </div>
+
+        <section id="admin-content">
+          <div class="admin-toolbar">
+            <h2>Зарегистрированные участники</h2>
+            <div class="admin-toolbar-actions">
+              <button id="export-users" type="button" title="Скачать список в CSV">Экспорт CSV</button>
+              <button id="refresh-users" type="button" title="Обновить список">Обновить</button>
+            </div>
+          </div>
+          <p class="admin-status" id="users-status" role="status" aria-live="polite"></p>
+          <p class="admin-notice">Список хранится только в localStorage этого браузера. Он не синхронизируется с другими устройствами и не является защищённой админкой.</p>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th scope="col">Дата</th>
+                  <th scope="col">Имя</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Телефон</th>
+                </tr>
+              </thead>
+              <tbody id="users-list"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="assets/js/admin.js"></script>
+  </body>
+</html>
